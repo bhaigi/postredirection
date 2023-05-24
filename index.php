@@ -2,7 +2,9 @@
 <html>
 <body>
 
-<h2>Redirect to a Webpage</h2>
+  <script>
+    window.location.replace("http://www.w3schools.com");
+  </script>
 
 </body>
 </html> 
