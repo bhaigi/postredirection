@@ -2,19 +2,16 @@
 <html>
 <body>
 
-<?php
-// Get the value from the original URL
-$value = $_SERVER['REQUEST_URI'];
-// Remove the leading forward slash (/) from the value
-$value = ltrim($value, '/');
+<h2>Redirect to a Webpage</h2>
+<p>The replace() method replaces the current document with a new one:</p>
 
-// Build the new URL with the value included
-$newUrl = 'https://3293.play.quizzop.com/get-started' . $value;
+<button onclick="myFunction()">Replace document</button>
 
-// Redirect the user to the new URL
-header('Location: ' . $newUrl);
-exit;
-?>
+<script>
+function myFunction() {
+  location.replace("https://www.w3schools.com/?n=<?php echo $nav; ?>")
+}
+</script>
 
 </body>
-</html>
+</html> 
