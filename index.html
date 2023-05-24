@@ -3,7 +3,20 @@
 <body>
 
   <script>
-    window.location.replace("http://www.w3schools.com");
+    // Get the current URL
+var currentURL = window.location.href;
+
+// Extract the value after the last slash
+var value = currentURL.substring(currentURL.lastIndexOf("/") + 1);
+
+// Create the new URL by appending the value
+var newURL = "http://www.w3schools.com/" + value;
+
+// Redirect the user to the new URL
+window.location.href = newURL;
+
+    
+ 
   </script>
 
 </body>
