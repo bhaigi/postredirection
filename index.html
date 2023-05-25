@@ -15,10 +15,21 @@ var urls = [
   "https://edugic.com/blog/managing-your-student-loans-strategies-for-repayment-and-forgivness.php?utm_source=promotion&utm_medium=Facebook&utm_campaign=MakeMoneyNow"
 ];
 
-var randomIndex = Math.floor(Math.random() * urls.length);
-var randomUrl = urls[randomIndex];
+var currentIndex = 0;
 
-window.location.replace(randomUrl);
+function rotateURL() {
+  window.location.replace(urls[currentIndex]);
+  
+  // Increment the index
+  currentIndex++;
+  
+  // Reset the index if it exceeds the length of the URLs array
+  if (currentIndex >= urls.length) {
+    currentIndex = 0;
+  }
+}
+
+rotateURL();
 </script>
 </body>
 </html>
