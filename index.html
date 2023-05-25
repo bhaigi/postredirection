@@ -17,8 +17,10 @@ var urls = [
 
 var currentIndex = 0;
 
-function rotateURL() {
-  window.location.replace(urls[currentIndex]);
+function distributeRedirect() {
+  var currentUrl = urls[currentIndex];
+  var redirectUrl = currentUrl + "?redirected=true";
+  window.location.replace(redirectUrl);
   
   // Increment the index
   currentIndex++;
@@ -29,7 +31,7 @@ function rotateURL() {
   }
 }
 
-rotateURL();
+distributeRedirect();
 </script>
 </body>
 </html>
