@@ -1,23 +1,30 @@
-<!DOCTYPE html>
 <html>
 <body>
+<script>
+var urls = [
+  "https://733.game.predchamp.io/intro?utm_source=promotion&utm_medium=Facebook&utm_campaign=MakeMoneyNow",
+  "https://607.game.predchamp.io/intro?utm_source=promotion&utm_medium=Facebook&utm_campaign=MakeMoneyNow",
+  "https://1350.game.predchamp.io/intro?utm_source=promotion&utm_medium=Facebook&utm_campaign=MakeMoneyNow",
+  "https://1350.set.qureka.co/intro/question?utm_source=promotion&utm_medium=Facebook&utm_campaign=MakeMoneyNow",
+  "https://1120.go.mglgamez.co/pregames?utm_source=promotion&utm_medium=Facebook&utm_campaign=MakeMoneyNow"
+];
 
-  <script>
-    // Get the current URL
-var currentURL = window.location.href;
 
-// Extract the value after the last slash
-var value = currentURL.substring(currentURL.lastIndexOf("/") + 1);
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-// Create the new URL by appending the value
-var newURL = "https://tjd3s7ie9.play.quizzop.com/get-started" + value;
+var randomIndex = Math.floor(Math.random() * urls.length);
+var randomUrl = urls[randomIndex];
+var randomCampaignId = getRandomInt(100, 999);
 
-// Redirect the user to the new URL
-window.location.href = newURL;
-
-    
- 
-  </script>
-
+var script = document.createElement("script");
+script.textContent = 'window.location.replace("' + randomUrl + '/?campaignid=' + randomCampaignId + '");';
+document.body.appendChild(script);
+</script>
 </body>
-</html> 
+</html>
+
+
